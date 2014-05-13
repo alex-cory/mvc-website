@@ -1,0 +1,288 @@
+p.cid {
+	float: right;
+}
+
+onpost {
+	padding-bottom: 1em;
+}
+div.weather {
+	margin-left: 1em;
+}
+div.container.c-weather.body {
+	padding: 1em;
+}
+div.blog-post {
+	position: relative;
+	padding: 1em;
+	/*margin-bottom: 2em;*/
+	border: 1px solid black;
+	border-radius: 1em;
+	margin: 2em;
+	/*overflow: auto;*/
+	word-wrap:break-word;
+	min-height: 12em;
+	background: whitesmoke;
+}
+form.btm-2-em {
+	margin-bottom: 10em;
+}
+div.container.top {
+	padding-top: 1em;
+}
+
+form.form-horizontal.form-centered {
+	margin: 2em;
+	left: 0;
+	/* position: relative; */
+	top: 0;
+}
+iframe {
+	border-radius: .4em;
+	background: white;
+}
+.news-image>p {
+	margin-right: 18em;
+	font-size: 1.2em;
+	position: absolute;
+	top: 4em;
+}
+ul.nav.nav-pills.pill-cool {
+	position: absolute;
+	righ: 1em;
+	left: 44em;
+	bottom: 1.2em;
+}
+.primary {
+	color: blue;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+	color: #2CA434;
+}
+
+.pubdate {
+	position: absolute;
+	bottom: 1em;
+	color: #2CA434;
+	font-weight: bold;
+}
+p.pubdate {
+	position: absolute;
+	bottom: -1.5em;
+}
+.container {
+	width: 960px;
+}
+a.pull-left.btn.btn-danger {
+	padding-left: 1em;
+	position: relative;
+	bottom: 2.78em;
+	margin-left: .7em;
+}
+
+a.pull-left.change-area.btn {
+	float: left;
+	margin-left: 5em;
+	position: relative;
+	bottom: 2.78em;
+}
+.nav-tabs, .nav-pills {
+	position: relative;
+	left: 7em;
+}
+
+a.btn.btn-success.coolio {
+	position: relative;
+	top: 2.3em;
+}
+
+input.btn.change-area.pull-right {
+	position: relative;
+	bottom: 2.5em
+}
+
+div.page-header>h4 {
+	margin-top: 3em;
+}
+input.comment-delete.btn.btn-danger {
+	top: -.15em;
+	left: 55em;
+}
+div.sweet {
+	border: 2px solid lightgrey;
+	border-radius: 1em;
+	padding: .7em;
+	margin: 2em;
+}
+input.btn.btn-success {
+	top: .8em;
+	position: relative;
+}
+div.commentage {
+	margin: 2em;
+}
+input.btn.btn-danger {
+	position: relative;
+	top: 1.45em;
+	left: 57.5em;
+}
+.blog-p {
+	color: #2CA434;
+	font-size: 1.2em;
+}
+.main-pad {
+	padding: 1em;
+}
+h2.news {
+	position: absolute;
+	top: .4em;
+	left: .5em;
+	line-height: 1em;
+	margin-right: 14em;
+	font-size: 1.5em;
+}
+
+img.profimg.img-circle.center-block {
+	position: relative;
+	width: 18em;
+	right: 1em;
+	top: -7em;
+}
+
+a>img {
+	position: absolute;
+	bottom: 0.5em;
+	left: 58.7em;
+}
+.blog-p-color {
+	color: #2CA434;
+}
+.blog-p-clr, p.blog-p-clr {
+	color: #2CA434;
+	font-size: 1.2em;
+	position: relative;
+	top: 2em;
+	margin-bottom: 4em;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.wrapword{
+	white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	white-space: pre-wrap;       /* css-3 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	word-break: break-all;
+	white-space: normal;
+}
+
+.news-image img {
+	/*float: right;*/
+	/*clear: right;*/
+	width: auto\9;
+	height: 10em;
+	max-width: 100%;
+	vertical-align: middle;
+	border-radius: .6em;
+	border: 2px solid lightgrey;
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+	top: 1em;
+	/*margin-left:auto;*/
+	/*margin-right:0;*/
+
+}
+body, html {
+	background: url(../img/green_envy.jpg) no-repeat center center fixed;
+	/*background: url(http://goo.gl/AN74Ei) no-repeat fixed;*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.body {
+	background: black;
+}
+
+div.dropdown-menu {
+	border-radius: .5em;
+	background: rgba(26, 26, 26, 0.9);
+}
+.container.body {
+	/*height: 27em;*/
+	border-radius: 1em;
+	background: rgba(26, 26, 26, 0.9);
+	margin-bottom: 10em;
+}
+
+form.form-horizontal {
+	position: relative;
+	left: -3em;
+	top: 5em;
+}
+
+div.alert.alert-success {
+	top: 2em;
+	position: relative;
+	margin-bottom: 4em;
+	padding: 0.6em;
+}
+
+input.form-control.r-half {
+	width: 48%;/*475px*/
+	position: relative;
+	top: -2.4em;
+	left: 34.5em;
+}
+
+input.form-control.l-half {
+	width: 48%;
+	margin-right: 10px;
+}
+
+input.form-control.middle {
+	position: relative;
+	top: -3em;
+}
+
+input.form-control.bottom.l-half {
+	position: relative;
+	top: -3.5em;
+}
+
+input.form-control.bottom.r-half {
+	position: relative;
+	top: -7.5em;
+}
+
+input.btn.btn-lg.btn-primary.btn-block {
+	position: relative;
+	top: -6em;
+}
+div.span8.lil-pad {
+	padding: 1em;
+}
+
+div.span8.fix-it {
+	margin-bottom: 7em;
+}
+
+.l-r-lil-marg {
+	margin: 0 1em 0 1em;
+}
+
+p.text-center>a {
+	position: relative;
+	top: -5em;
+}
+
+p.alertage {
+	font-size: 1em;
+}
+
+div.l-r-lil-marg.alert {
+	margin-bottom: 2em;
+}
