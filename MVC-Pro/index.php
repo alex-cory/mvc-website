@@ -1,5 +1,5 @@
 <?php
-
+// did it work?
 // ini_set("auto_prepend_file","/Applications/MAMP/bin/php/php5.5.10/prepend.php");
 // require_once '/Applications/MAMP/bin/php/php5.5.10/conf/prepend.php';
 // require_once '/Applications/MAMP/bin/php/php5.5.10/conf/kint/Kint.class.php';
