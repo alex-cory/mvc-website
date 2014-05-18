@@ -4,7 +4,6 @@ class ManagePostsController extends Controller
 {
 	public $postObject;
 	public $categoryObject;
-
 	protected $access = 1;
 
 	public function index()
@@ -20,7 +19,8 @@ class ManagePostsController extends Controller
 	}
 
 	/**
-	 * [add description]
+	 * Description:
+	 * This adds a post.
 	 */
 	public function add()
 	{
@@ -80,9 +80,7 @@ class ManagePostsController extends Controller
 
 	/**
 	 * Description:
-	 * This adds a post.
-	 *
-	 * Sets a message
+	 * This adds a post and sets a message for whether it was successful or not.
 	 */
 	public function save()
 	{
@@ -92,20 +90,16 @@ class ManagePostsController extends Controller
 			// then don't by leaving this function
 			return;
 		}
-		// d($_POST);
 
 		$this->postObject = new Post();
 		$u = new User();
-
 		$data = array(
-						'title'      => $_POST['post_title'],
-						'content'    => $_POST['post_content'],
-						'date'       => $_POST['post_date'],
-						'categoryID' => $_POST['post_categoryID'],
-						'uID'        => !empty($u->uID) ? $u->uID : 0 // This should actually never store 0, the user should always be logged in.
-		              );
-
-		// d($data);
+			'title'      => $_POST['post_title'],
+			'content'    => $_POST['post_content'],
+			'date'       => $_POST['post_date'],
+			'categoryID' => $_POST['post_categoryID'],
+			'uID'        => !empty($u->uID) ? $u->uID : 0 // This should actually never store 0, the user should always be logged in.
+		);
 
 		if (empty($data['date'])) {
 			$data['date'] = date('Y-m-d H:i:s');
@@ -125,16 +119,15 @@ class ManagePostsController extends Controller
 	}
 
 	/**
-	 * [edit description]
-	 * @param  [type] $pID [description]
+	 * Description:
+	 * This basically allows the user to edit a post.
+	 *
+	 * @param  int    $pID [description]
 	 * @return [type]      [description]
 	 */
 	public function edit($pID)
 	{
-		// die($pID);
-
 		$this->postObject = new Post();
-
 		$post = $this->postObject->getPost($pID);
 
 		$this->set('pID', $post['pID']);
@@ -147,7 +140,9 @@ class ManagePostsController extends Controller
 	}
 
 	/**
-	 * [update description]
+	 * Description:
+	 * This updates the blog post.
+	 *
 	 * @return [type] [description]
 	 */
 	public function update()
@@ -155,12 +150,12 @@ class ManagePostsController extends Controller
 		$this->postObject = new Post();
 
 		$post = array(
-						'title'      => $_POST['post_title'],
-						'content'    => $_POST['post_content'],
-						'date'       => $_POST['post_date'],
-						'categoryID' => $_POST['post_categoryID'],
-						// 'pID'        => $_POST['post_uID']
-		              );
+			'title'      => $_POST['post_title'],
+			'content'    => $_POST['post_content'],
+			'date'       => $_POST['post_date'],
+			'categoryID' => $_POST['post_categoryID'],
+			// 'pID'        => $_POST['post_uID']
+        );
 
 		if (empty($post['date'])) {
 			$post['date'] = date('Y-m-d H:i:s');
@@ -178,20 +173,26 @@ class ManagePostsController extends Controller
 		header('Location: /index.php/manageposts/');
 		// header('Location: /index.php/manageposts/edit/' . $_POST['pID']); // DEBUG: BASE_URL & remove index.php was /addPost/edit/
 		exit;
-
 	}
 
+	/**
+	 * Description:
+	 * This basically deletes a post.
+	 *
+	 * @param  int    $pID [description]
+	 * @return [type]      [description]
+	 */
 	public function delete($pID)
 	{
 		$this->postObject = new Post();
 
 		$post = array(
-						'title'      => $_POST['post_title'],
-						'content'    => $_POST['post_content'],
-						'date'       => $_POST['post_date'],
-						'categoryID' => $_POST['post_categoryID'],
-						'pID'        => $_POST['post_uID']
-		              );
+			'title'      => $_POST['post_title'],
+			'content'    => $_POST['post_content'],
+			'date'       => $_POST['post_date'],
+			'categoryID' => $_POST['post_categoryID'],
+			'pID'        => $_POST['post_uID']
+        );
 
 		$result = $this->postObject->deletePost($pID, $post);
 
@@ -200,7 +201,6 @@ class ManagePostsController extends Controller
 
 		header('Location: /index.php/manageposts/'); // DEBUG: BASE_URL & remove index.php was /addPost/edit/
 		exit;
-
 	}
 
 }

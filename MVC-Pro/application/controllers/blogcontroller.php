@@ -6,18 +6,13 @@ class BlogController extends Controller
 	public $commentObject;
 	public $userObject;
 
-	// public function __construct()
-	// {
-	// 	parent::__construct();
-	// }
-
 	/**
 	 * Description:
 	 * Sets the key of 'post' in the Controller's $data array and pulls in the data from the database
 	 * as the value, matching it with they key of 'post'
 	 *
-	 * @param  [type] $pID [description]
-	 * @return [type]      [description]
+	 * @param  int 	  $pID  the ID of the post
+	 * @return object $post contains all the data from the post
 	 */
    	public function post($pID)
    	{
@@ -51,7 +46,7 @@ class BlogController extends Controller
 		$post = $this->postObject->getPost($pID);
 
 		// changing date format
-		$post['date'] = date('F jS', strtotime($post['date']));
+		// $post['date'] = date('F jS', strtotime($post['date']));
 
 	  	// Sets the key of 'post' in the Controller's $data array and pulls in the data from the database as the value, matching it with they key of 'post'
 	  	$this->set('post', $post);
@@ -59,16 +54,17 @@ class BlogController extends Controller
 
 	/**
 	 * Description:
+	 * This
 	 *
-	 * @param  [type] $pID [description]
-	 * @return [type]      [description]
+	 * @param  int    $categoryID [description]
+	 * @return [type]      		  [description]
 	 */
    	public function category($categoryID)
    	{
    		// instantiate the Category class
 		$this->categoryObject = new Category();
 
-   		// instantiate the post class
+   		// instantiate the Post class
 		$this->postObject = new Post();
 
 		// If the user is submitting a Category.
@@ -82,36 +78,27 @@ class BlogController extends Controller
    		}
 
    		$u = new User();
-   		// Delete comments
+
+   		// Delete comments if the Delete Button is pressed
    		if ($u->isAdmin() && !empty($_POST['action']) && 'Delete' == $_POST['action']) {
    			$this->commentObject->deleteComment($_POST['commentID']);
    		}
-
    		$this->set('comments', $this->commentObject->getCommentsByPostID($pID));
-   		// $this->set('user', $this->commentObject->getUser())
-
 
 		// this is pulling in the the data from the row in the database and storing it in $post
 		$post = $this->postObject->getPost($pID);
 
 		// changing date format
-		$post['date'] = date('F jS', strtotime($post['date']));
+		// $post['date'] = date('F jS', strtotime($post['date']));
 
 	  	// Sets the key of 'post' in the Controller's $data array and pulls in the data from the database as the value, matching it with they key of 'post'
 	  	$this->set('post', $post);
    	}
 
-	/**
-	 * Description:
-	 *
-	 *
-	 * @return [type] [description]
-	 */
 	public function index()
 	{
    		// instantiate the post class
 		$this->postObject = new Post();
-
 		$posts = $this->postObject->getAllPosts();
 
 		$this->set('title', 'Blog');
@@ -123,8 +110,8 @@ class BlogController extends Controller
 	 * Sets the key of 'comment' in the Controller's $data array and pulls in the data from the database
 	 * as the value, matching it with they key of 'comment'
 	 *
-	 * @param  [type] $commentID [description]
-	 * @return [type]      		 [description]
+	 * @param  int    $commentID [description]
+	 * @return object $comment 	 [description]
 	 */
    	public function comment($commentID)
    	{

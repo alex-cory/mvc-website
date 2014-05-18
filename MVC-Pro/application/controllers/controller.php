@@ -27,7 +27,6 @@ class Controller
 		//instantiate the view class
 		$this->view = new View();
 		new Model();
-
 		// check user object
 		$u = new User();
 
@@ -36,7 +35,6 @@ class Controller
 
 			// assign a session variable
 			$_SESSION['redirect'] = $load;
-
 			// send them to the login page
 			header('Location: ' . BASE_URL . '/index.php/login/');
 
@@ -44,21 +42,16 @@ class Controller
 
 			//run any task methods
 			if ($method) {
-
 				$this->runTask($method, $parameters);
-
 			} else {
-
 				$this->index();
 				$method = 'index';
 			}
 
 			//render the load
 			if (file_exists('views/' . strtolower($view) . '/' . strtolower($method) . '.php')) {
-
 				$this->view->load($view, $method, $this->data);
 			} else {
-
 				$this->view->load($view, 'index', $this->data);
 				// view: class name
 				// load($filename, $data): sees if $data is array & extracts it from the file
@@ -85,7 +78,6 @@ class Controller
 
 				$parameters = array();
 			}
-
         	call_user_func_array(array($this, $method), $parameters);
      	}
 	}
@@ -94,8 +86,6 @@ class Controller
 	 * Description:
 	 * The index() method is the one run if no task method is run. Here as a placeholder for
 	 * child classes.
-	 *
-	 * @return [type] [description]
 	 */
 	public function index()
 	{

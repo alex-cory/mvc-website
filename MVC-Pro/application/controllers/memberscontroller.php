@@ -36,16 +36,25 @@ class MembersController extends Controller
 		$section = 'members';
 	}
 
+	/**
+	 * Description:
+	 * This shows the profile for a specific user.
+	 *
+	 * @return [type] [description]
+	 */
 	public function profile()
 	{
 		$this->userObject = new User();
 		$this->set('user', $this->userObject);
 		$this->set('task','update');
-		// d($user->email);
-
 	}
 
-
+	/**
+	 * Description:
+	 * This is used for updating a specific user.
+	 *
+	 * @return [type] [description]
+	 */
 	public function update()
 	{
 		$data = array(
