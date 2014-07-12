@@ -6,7 +6,6 @@
 	// Pulling out all the variables from the $post array so we can access them easily
 	extract($post); // $post: found in post model. check getPost() ?>
 
-
 	<div class="container page-header">
 		<h1><?php echo $title; ?></h1>
 		<h4>Posted: <?php echo $date; ?></h4>
@@ -57,7 +56,6 @@
 		<?php endif; ?>
 
 	</div><!-- End container -->
-
 
 <?php
 # FOOTER

@@ -8,7 +8,6 @@ class ManagePostsController extends Controller
 
 	public function index()
 	{
-
    		// instantiate the post class
 		$this->postObject = new Post();
 
@@ -24,7 +23,6 @@ class ManagePostsController extends Controller
 	 */
 	public function add()
 	{
-
 		$this->postObject = new Post();
 		// $this->categoryObject = new Category();
 		$this->set('task', 'save');
@@ -202,5 +200,4 @@ class ManagePostsController extends Controller
 		header('Location: /index.php/manageposts/'); // DEBUG: BASE_URL & remove index.php was /addPost/edit/
 		exit;
 	}
-
 }

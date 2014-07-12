@@ -77,7 +77,7 @@ class Post extends Model
 			INSERT INTO posts (' . implode(', ', array_keys($data)) . ')
 			VALUES (' . rtrim(str_repeat('?, ', count($data)), ', ') . ')';
 		//$sql='INSERT INTO posts (title, content, categoryID, date, uID)
-		//	  VALUES (?,?)';
+		//	  VALUES (?,?,?,?,?)';
 		// var_dump($sql);
 		// die('here');
 
